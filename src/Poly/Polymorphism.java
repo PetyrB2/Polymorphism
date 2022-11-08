@@ -1,14 +1,15 @@
 package Poly;
 
+//=========================================================================
 // A few classes to work with Bird, Robin, Swallow and Pelican
 class Bird {
-	
-	// Create a FINAL Object that cannot be Overridden 
+
+	// Create a FINAL Object that cannot be Overridden
 	public void species() {
 		final String spec = "Species is Bird";
 		System.out.println(spec);
 	}
-	
+
 	// Every Bird should have a Name
 	public void name() {
 		System.out.println("A_Bird");
@@ -30,6 +31,7 @@ class Bird {
 	}
 }
 
+//=========================================================================
 // Robin class
 class Robin extends Bird {
 	// Robin extends Bird but we Override the name() method locally.
@@ -39,6 +41,7 @@ class Robin extends Bird {
 	}
 }
 
+//=========================================================================
 // Sparrow class
 class Sparrow extends Bird {
 	// Sparrow extends Bird but we Override the name() method locally.
@@ -48,16 +51,11 @@ class Sparrow extends Bird {
 	}
 }
 
+//=========================================================================
 // Pelican class
 class Pelican extends Bird {
 	// Pelican extends Bird but we Override name(), sing() and size() methods
 	// locally.
-	
-	@Override
-	public void species() {
-		String spec = "I'm a reptile";
-		System.out.println(spec);
-	}
 
 	@Override
 	public void name() {
@@ -75,7 +73,7 @@ class Pelican extends Bird {
 	}
 
 }
-
+//=========================================================================
 // Begin the main class
 public class Polymorphism {
 	// The main runner
@@ -95,7 +93,7 @@ public class Polymorphism {
 		b.hasFeathers();
 		b.sing();
 		b.size();
-			
+
 		// Create a Robin
 		System.out.println("\nA Robin...");
 		Robin r = new Robin();
@@ -128,7 +126,7 @@ public class Polymorphism {
 		System.out.println("and sing() methods in its class as they differ.");
 		System.out.println("----------------------------------------------------------");
 
-
+		// =========================================================================
 		// Second way of Printing the data out.
 		System.out.println("----------------------------");
 		System.out.println("Using an Array and For Loop");
@@ -161,7 +159,6 @@ public class Polymorphism {
 			birds[x].size();
 		}
 
-	
-	
 	}
 }
+//=========================================================================
